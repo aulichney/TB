@@ -51,6 +51,10 @@ Given the resource intensive nature of each step in the experimentation process,
 
 ## Training a model
 
+```bash
+python run.py train --path_model_config="./data/configs/model_vgg16.json" --path_dataset_config="./data/configs/dataset_TB.json" --path_training_config="./data/configs/training_plateau.json" --path_output="./data/models/TB_vgg16_plateau_0" --seed=0 2>&1 | tee -a "./data/logs/training_TB_vgg16_plateau_0.txt"
+```
+
 To train a single model, two resorces must exist in the project folder.
 First, the dataset must be available in ```./data/datasets/```.
 Second, the configurations for the model architecture, dataset and training regime must be present at ```./data/configs```
